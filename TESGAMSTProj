@@ -1,0 +1,20 @@
+!pip install yfinance
+!pip install requests
+!pip install pandas
+!mamba install bs4 == 4.10.0 -y
+!mamba install html5.lib == 1.1 -y
+!pip install lxml
+!pip install plotly
+
+import yfinance as yf
+from bs4 import BeautifulSoup
+import requests
+import pandas as pd
+import numpy as np
+
+#url = "https://finance.yahoo.com/quote/TSLA/history?p=TSLA"
+TSLA = yf.Ticker('tsla')
+tsla_info = yf.download
+tsla = TSLA.history(period = 'max')
+print (tsla)
+
